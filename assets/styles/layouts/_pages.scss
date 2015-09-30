@@ -1,0 +1,17 @@
+.home-banner{
+	background-image: url(../images/feature-background.jpg);
+// 	height: 40vw;
+	background-size: cover;
+	background-position: bottom;
+// 	padding-top: 50vh;
+	position: relative;
+}
+.jumbotron.dark{
+	background-color: #3a3a3a;
+	color: white;
+}
+.jumbotron.light{ background-color: #f2f2f2; }
+.jumbotron h2{ margin-top:0; }
+.home.jumbotron {margin-bottom: 0;}
+
+//div[class*='col-md-'] h2{ margin-top: 0; }
