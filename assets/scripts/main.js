@@ -75,3 +75,28 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+// appents html class with bootstrap width
+mediaQueryBodyClass();
+window.addEventListener("load", mediaQueryBodyClass);
+window.addEventListener("resize", mediaQueryBodyClass);
+function mediaQueryBodyClass(){
+    var windowWidth = window.innerWidth;
+    var bodyTag = document.documentElement;
+    if (windowWidth < 786){
+        bodyTag.classList.remove("sm", "md", "lg");
+        bodyTag.classList.add("xs");
+    }
+    else if (windowWidth >= 786 && windowWidth < 992){
+        bodyTag.classList.remove("xs", "md", "lg");
+        bodyTag.classList.add("sm");
+    }
+    else if (windowWidth >= 992 && windowWidth < 1200){
+        bodyTag.classList.remove("xs", "sm", "lg");
+        bodyTag.classList.add("md");
+    }
+    else if (windowWidth >= 1200){
+        bodyTag.classList.remove("xs", "sm", "md");
+        bodyTag.classList.add("lg");
+    }
+}
